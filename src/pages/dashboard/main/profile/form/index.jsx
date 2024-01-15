@@ -27,7 +27,7 @@ function UserProfileForm({ userInfo, uploadPhoto, handleChange }) {
       alignI="center"
       padding="25px"
       width="auto"
-      height="650px"
+      height="auto"
       br="8px">
       <img
         src={userInfo?.avatar}
@@ -37,18 +37,18 @@ function UserProfileForm({ userInfo, uploadPhoto, handleChange }) {
         style={{ borderRadius: "50%", objectFit: "cover" }}
       />
       <small style={{ color: "#274B89", padding: "15px 0 15px 0" }}>
-        Upload new photo
+        Upload new brand image
       </small>
       <input type="file" style={imagePrev} onChange={uploadPhoto} />
       <Div align="flex-start" padding="15px 0 12px 0">
-        Contact Details
+        Company Details
       </Div>
       <Input bg="#F8F8F8" dis="none" pcol="#C4C4C4" mar="6px 0" p="0 0 0 20px">
         <input
           name="firstName"
           type="text"
           defaultValue={userInfo?.firstName}
-          placeholder="Abdul"
+          placeholder="Brand Name"
           onChange={handleChange}
         />
       </Input>
@@ -58,7 +58,7 @@ function UserProfileForm({ userInfo, uploadPhoto, handleChange }) {
           type="text"
           defaultValue={userInfo.lastName}
           onChange={handleChange}
-          placeholder="Mashir"
+          placeholder="Contact email"
         />
       </Input>
       <Input bg="#F8F8F8" dis="none" pcol="#C4C4C4" mar="6px 0" p="0 0 0 20px">
@@ -66,7 +66,7 @@ function UserProfileForm({ userInfo, uploadPhoto, handleChange }) {
           name="email"
           type="email"
           defaultValue={userInfo.email}
-          placeholder="abul@gmail.com"
+          placeholder="Contact phone"
           readOnly={true}
         />
         <p
@@ -88,18 +88,79 @@ function UserProfileForm({ userInfo, uploadPhoto, handleChange }) {
           readOnly={true}
         />
       </Input>
-      <Div display="flex" margin="10px 10px 0 10px">
-        <Img src={AlertCircle} alt="alert-circle" height={18} />
-        <Div
-          color="#274b89"
-          fs="13px"
-          width="100%"
-          padding="0 0 0 0"
-          margin="0 0 0 10px">
-          Type in your correct name and use a good photo, make sure it is clear
-          so that it will increases your chance of getting good gigs :)
-        </Div>
-      </Div>
+      <Div margin="20px 0 20px 0" width="100%" backgroundColor="#F8F8F8">
+              <Div
+                color="#000"
+                display="flex"
+                justify="space-between"
+                padding="10px 8px 8px 8px">
+                <h5 style={{ color: "rgba(0, 0, 0, 0.7)", fontWeight: 800 }}>
+                  Brief Info:
+                </h5>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    fontWeight: 800,
+                    color: "#274889",
+                  }}>
+                  {userInfo.bio ? userInfo.bio.length : 0}/200
+                </p>
+              </Div>
+              <Input
+                mar="0"
+                col="#929AA7"
+                wd="100%"
+                hg="100px"
+                pcol="hsla(218, 11%, 61%, 1)">
+                <textarea
+                  maxLength="200"
+                  type="text"
+                  onChange={handleChange}
+                  name="bio"
+                  value={userInfo.bio}
+                  style={{ fontSize: "12px", padding: "8px", resize: "none" }}
+                />
+              </Input>
+            </Div>
+
+            <Input bg="#F8F8F8" dis="none" pcol="#C4C4C4" mar="6px 0" p="0 0 0 20px">
+        <input
+          name=""
+          type="text"
+          
+          placeholder="Food Items"
+          
+        />
+        <p
+          style={{
+            position: "absolute",
+            top: "6px",
+            right: "25px",
+            color: "#5FC146",
+            fontSize: "9px",
+          }}>
+          Change Category
+        </p>
+      </Input>
+            <Input bg="#F8F8F8" dis="none" pcol="#C4C4C4" mar="6px 0" p="0 0 0 20px">
+        <input
+          name=""
+          type="text"
+          
+          placeholder="Food stuffs, Food Items"
+          
+        />
+      </Input>
+            <Input bg="#F8F8F8" dis="none" pcol="#C4C4C4" mar="6px 0" p="0 0 0 20px">
+        <input
+          name=""
+          type="text"
+          
+          placeholder="Change location"
+          
+        />
+      </Input>
+      
     </Div>
   );
 }

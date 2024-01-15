@@ -3,8 +3,8 @@ import media from "GlobalStyles/utils/media";
 import styled from "styled-components/macro";
 
 export const HeaderContainer = styled.div`
-  width: 55vw;
-  min-width: 60vw;
+  // width: 55vw;
+  // min-width: 60vw;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -12,13 +12,13 @@ import { ProfileBody, MapArea, Tag } from "./style";
 import { Button } from "GlobalStyles/spotrrStyles/style";
 import Catalog from "assets/svg/catalog.svg";
 import backArrow from "assets/svg/backArrow.svg";
-import AlertCircle from "assets/svg/alertCircle.svg";
+import BarCode from "assets/svg/barcode.svg";
 import TagImage from "assets/tag.png";
 import { useSelector } from "react-redux";
-import UserProfileForm from "./form/index";
+import Divider from "GlobalStyles/dividerLine";
 import { useLocation } from "react-router-dom";
 
-const Profile = () => {
+const Profile2 = () => {
   const profileImage = {
     position: "absolute",
     height: "135px",
@@ -167,16 +167,8 @@ const Profile = () => {
       </Div>
 
       <Div gap="20px" display="flex" width="100%" justify="space-between">
-        {search !== "?profile" && (
-          <Div width="50%">
-            <UserProfileForm
-              userInfo={userInfo}
-              uploadPhoto={uploadPhoto}
-              handleChange={handleChange}
-            />
-          </Div>
-        )}
-        <Div backgroundColor="#fff" padding="0 0 25px 0" width="50%">
+
+      <Div backgroundColor="#fff" padding="0 0 25px 0" width="50%">
           <MapArea>
             <iframe
               title="map"
@@ -238,34 +230,39 @@ const Profile = () => {
                   {userInfo.bio ? userInfo.bio.length : 0}/200
                 </p>
               </Div>
-              <Input
-                mar="0"
-                col="#929AA7"
-                wd="100%"
-                hg="100px"
-                pcol="hsla(218, 11%, 61%, 1)">
-                <textarea
-                  maxLength="200"
-                  type="text"
-                  onChange={handleChange}
-                  name="bio"
-                  value={userInfo.bio}
-                  style={{ fontSize: "12px", padding: "8px", resize: "none" }}
-                />
-              </Input>
+              I’ve worked directly, indirectly with these brands Either part time, full time, campaign, accelerator, branding or product design)
             </Div>
-            <Div ta="right" margin="15px 0px 0px 0px">
+            
+            <Div margin="15px 0">
+            <Div margin="35px 0px 35px 0px" display="flex" justify="space-between" alignI="center">
               <Button
                 fw="bold"
                 color="#275b89"
-                bc="#00000000"
+                bc="#ecf7ff"
+                
                 fs="15px"
-                style={{ cursor: "pointer" }}
-                onClick={() => handleBioSave()}>
-                Save
+                style={{ cursor: "pointer", padding:"10px 30px" }}>
+                Call
+              </Button>
+              <Button
+                fw="bold"
+                color="#275b89"
+                bc="#ecf7ff"
+                
+                fs="15px"
+                style={{ cursor: "pointer", padding:"10px 30px" }}>
+                Message
+              </Button>
+              <Button
+                fw="bold"
+                color="#275b89"
+                bc="#ecf7ff"
+                
+                fs="15px"
+                style={{ cursor: "pointer", padding:"10px 30px" }}>
+                My Barcode
               </Button>
             </Div>
-            <Div margin="15px 0">
               <Div ta="left" color="rgba(0, 0, 0, 0.7)" fw="bold" fs="14px">
                 Catalog
               </Div>
@@ -309,24 +306,46 @@ const Profile = () => {
                 </Div>
               </Div>
             </Div>
-            <Div display="flex" margin="10px 10px 0 10px">
-              <Img src={AlertCircle} alt="alert-circle" height={18} />
-              <Div
-                color="#274b89"
-                fs="13px"
-                width="100%"
-                padding="0 0 0 0"
-                margin="0 0 0 10px">
-                Type in your correct name and use a good photo, make sure it is
-                clear so that it will increases your chance of getting good gigs
-                :)
-              </Div>
-            </Div>
+         
           </Div>
         </Div>
+
+        <Div backgroundColor="#fff" padding="0 0 20px 0" width="50%">
+          
+          <Div padding="25px 35px">
+                <Img src={BarCode} alt="alert-circle" width={"100%"} />
+            
+            <Div fs="20px" padding="20px" color="#274B89" fw="bold">
+            Share Adbul’s profile
+            </Div>            
+
+            <Divider />
+            <Div fs="20px" color="#274B89" padding="20px" fw="bold">
+            Block this user
+            </Div>            
+            <Divider />
+          <Div gap="20px" padding="25px" display="flex" width="100%" justify="space-between">
+
+                <Div  width="50%">
+                <Tag color="#274B89" fontSize={14}>
+                  <Img src={TagImage} width={16} height={16} />
+                  Write Feeback
+                </Tag>
+                </Div>
+                <Div  width="50%">
+                <Tag color="#274B89">
+                  <Img src={TagImage} width={16} height={16} />
+                  Report
+                </Tag>
+                </Div>
+            </Div>
+          </Div>
+
+        </Div>
+        
       </Div>
     </ProfileBody>
   );
 };
 
-export default Profile;
+export default Profile2;

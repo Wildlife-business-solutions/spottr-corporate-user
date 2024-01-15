@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAdminModalContext } from "context/AdminModalContext";
 import CategoryContent from "./categories";
 import DiscoverWallarea from "./walletarea";
-import { Button, Div } from "GlobalStyles/spotrrStyles/style";
+import { Button, Div, SpottrH, SpottrP } from "GlobalStyles/spotrrStyles/style";
 import { MapAreaDiscover } from "./walletarea/style";
 import { ContainerTrendingDiscover, ItemCategoryContainer } from "./style";
 import { Row, Column } from "../common/style";
@@ -14,11 +14,14 @@ import DiscoverRefer from "./discoverRefer";
 import CreateAd from "./modal/createAd";
 import { useSelector } from "react-redux";
 import dropdown from "assets/mem/membertype.svg";
+import userIcon from "assets/svg/userIcon1.svg";
 import { Img } from "../../../../GlobalStyles/spotrrStyles/style";
 import upgreen from "assets/svg/upgreen.svg";
 import DiscoverCategoryModal from "./modal/discoverCategoryModal";
 import { useHistory } from "react-router-dom";
 import GoogleMaps from "components/dashboard/main/GoogleMap";
+import Colors from "GlobalStyles/appColors";
+
 
 function DiscoverPage() {
   const { showmodal, setShowModal } = useAdminModalContext();
@@ -104,8 +107,43 @@ function DiscoverPage() {
       {showbannercreation && (
         <CreateAd show={showmodal} close={handleCloseModal} />
       )}
-      <Div width="95%" padding="0px 0px 50px 0px">
+      
+      <Div width="100%" padding="0px 0px 50px 0px">
         <>
+          <Row>
+            <Column size={2}>
+
+          <Div
+            display="flex"
+            justify="space-between"
+            alignI="center"
+            width="300px"
+            height="120px"
+            padding="20px"
+            backgroundColor={Colors.white}
+            br="10px"
+            style={{ border: "0.9px solid #E1EFFB" }}
+            >
+            <Div > 
+              <Div display="flex" width="100%" justify="space-between">
+                <SpottrP color={Colors.primary} fs="20px" fw="bold " p="0 0 6px 0">
+                  45
+                </SpottrP>
+                <Img src={userIcon} height="23px" width="23px" alt="User" />
+
+              </Div>
+              
+              <Div display="flex" width="100%" justify="space-between">
+                <small>Total members</small>
+                <small style={{  }}>+ 34.98%</small>
+
+              </Div>
+            </Div>
+            
+          </Div>
+
+            </Column>
+            </Row>
           <Row>
             <Column size={2}>
               <MapAreaDiscover

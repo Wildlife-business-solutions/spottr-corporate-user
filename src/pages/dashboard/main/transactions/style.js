@@ -16,7 +16,7 @@ export const TableRowDiv = styled.tr`
   }
   .tdstyle {
     width: 400px;
-    padding-top: 5px;
+    padding: 20px;
     text-align: center;
   }
   &:hover {

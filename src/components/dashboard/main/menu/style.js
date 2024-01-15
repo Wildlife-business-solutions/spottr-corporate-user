@@ -2,7 +2,7 @@ import media from "GlobalStyles/utils/media";
 import styled from "styled-components/macro";
 import Colors from "GlobalStyles/utils/appColors";
 export const MenuContainer = styled.div`
-  width: 280px;
+  width: 160px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@ export const MenuContainer = styled.div`
   background: #fff;
   box-shadow: 0px 2.5865px 12.9325px rgba(0, 0, 0, 0.07);
   border-radius: 1.93988px;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   padding: 30px 30px 0px 25px;
   // padding-left: 15px;
@@ -25,9 +25,9 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  // display: flex;
+  // justify-items: center;
+  // align-items: center;
   width: 100%;
   padding: 12px 0;
   // margin-top:6px;
@@ -40,7 +40,7 @@ export const MenuItem = styled.div`
   &.activeLink {
     background-color: ${Colors.grey};
     box-shadow: 0px 2.5865px 12.9325px rgba(0, 0, 0, 0.07);
-    border-radius: 1px;
+    border-radius: 10px;
   }
 `;
 export const MenuText = styled.small`
@@ -59,7 +59,7 @@ export const MenuIcon = styled.img`
 `;
 
 export const BigMenuItemsContainer = styled.div`
-  display: flex;
+  // display: flex;
   flex-direction: column;
   height: 100vh;
   padding: 25px 0 0 0;
@@ -74,7 +74,7 @@ export const MenuDropdownIcon = styled.img`
 `;
 
 export const MenuIconContainer = styled.div`
-  display: flex;
+  // display: flex;
   justify-content: space-between;
 `;
 export const MobileMenuContainer = styled.div`
@@ -90,7 +90,7 @@ export const MobileMenuContainer = styled.div`
 
   ${media.tablet`
         /* margin-top: -15px; */
-        display: flex;
+        // display: flex;
         height: 50px;
         width: 100%;
         background-color: white;
@@ -99,7 +99,7 @@ export const MobileMenuContainer = styled.div`
 `;
 export const UserInfoMenuContainer = styled.div`
   width: 100%;
-  display: flex;
+  // display: flex;
   align-items: center;
 `;
 

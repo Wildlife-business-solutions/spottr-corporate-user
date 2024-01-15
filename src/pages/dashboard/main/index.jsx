@@ -97,7 +97,8 @@ export default function Dashboard() {
         <InputProductModal />
         {/* <DashboardHome /> */}
         <DashboardBody>
-          <DashboardHeader company={data?.brandName} />
+          <DashboardHeader company={""} />
+          
           <Switch>
             {dashboardRoutes.map((route, i) => (
               <Route
@@ -109,6 +110,7 @@ export default function Dashboard() {
             ))}
           </Switch>
         </DashboardBody>
+        
       </DashboardContainer>
     </>
   );

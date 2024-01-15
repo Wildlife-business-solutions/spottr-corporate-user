@@ -7,6 +7,7 @@ import Search from "./searchIcon";
 import SingleMenu from "./singleMenu";
 import { HeaderContainer, NotificationDiv } from "./style";
 import AddWhite from "assets/svg/addwhite.svg";
+import Avatar from "assets/svg/avatar.svg";
 import Bell from "assets/svg/mainNotifi.svg";
 import Message from "assets/svg/messages.svg";
 import { headerMenuData } from "./menu";
@@ -21,9 +22,14 @@ import Colors from "GlobalStyles/utils/appColors";
 import menuCloseBtn from "assets/svg/closeBtn.svg";
 import {
   MESSAGES,
+  PROFILE,
   SEARCHREQUEST,
 } from "../../../../utilities/static/route-const";
 import NotificationModal from "../discover/modal/NotificationModal";
+import { LoginText } from "pages/signin/Login/style";
+import { LabelText } from "components/onboading/inputField/style";
+import { Column } from "../common/style";
+import { Row } from "react-bootstrap";
 
 export default function DashboardHeader() {
   const [subHeaderMenu, setSubHeaderMenu] = useState(0);
@@ -67,8 +73,39 @@ export default function DashboardHeader() {
   };
 
   return (
-    <HeaderContainer>
-      <Div display="flex" alignI="center">
+    <>      
+    <Div width="100%" padding="0px 0px 20px 0px" marginTop="20px">
+      <Row width="100%">
+        <Column size={6}>
+          <h4>Corporate Account</h4>
+          <p>Dangote Limited PLC</p>  
+        </Column>
+
+        <Column size={6}>
+          <NotificationDiv style={{ float: "right" }}>
+        <Div cursor="pointer" onClick={handleNotification} mr="10px">
+          <Img src={Bell} height="20px" width="20px" alt="Notification Bell" />
+        </Div>
+        <SpottrLink to={MESSAGES} display="flex">
+          <Img src={Message} height="20px" width="20px" alt="Message" />
+        </SpottrLink>
+      <SpottrLink to={PROFILE} display="flex">
+        <Img src={Avatar} height="50px" width="50px" alt="Message" />
+      </SpottrLink>
+      {showModal && (
+        <NotificationModal show={showModal} close={() => setShowModal(false)} />
+      )}
+      </NotificationDiv>
+
+        </Column>
+      </Row>
+    </Div>
+
+
+    <Div width="100%" padding="0px 0px 10px 0px">
+    <Row width="100%">
+            <Column size={6}>
+            <Div display="flex" alignI="center">
         <Search placeholder={"Type a keyword"} searchInFocus={searchInFocus} />
         {searchFocus && (
           <Div
@@ -104,49 +141,18 @@ export default function DashboardHeader() {
           </Div>
         )}
 
-        <Div display="flex" wrap="wrap" alignI="center" padding="0 0 0 25px">
-          {headerMenuData.map((menu, i) => (
-            <div onClick={() => setSubHeaderMenu(i)}>
-              <SingleMenu
-                key={i}
-                text={menu.text}
-                link={menu.link}
-                icon={menu.icon}
-                active={subHeaderMenu === i ? "menu-active" : ""}
-              />
-            </div>
-          ))}
-        </Div>
+        
       </Div>
-      <NotificationDiv>
-        <Div cursor="pointer" onClick={handleNotification} mr="10px">
-          <Img src={Bell} height="20px" width="20px" alt="Notification Bell" />
-        </Div>
-        <SpottrLink to={MESSAGES} display="flex">
-          <Img src={Message} height="20px" width="20px" alt="Message" />
-          <SpottrP fw="600" ml="10px" fs="12px">
-            Messages
-          </SpottrP>
-        </SpottrLink>
-      </NotificationDiv>
-      <Button
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-        p="10px"
-        w="110px"
-        br="3px"
-        fw="bold"
-        bc={Colors.primary}
-        color={Colors.white}
-        onClick={productModal}>
-        <Img src={AddWhite} alt="Message" /> Add New
-      </Button>
-      {showModal && (
-        <NotificationModal show={showModal} close={() => setShowModal(false)} />
-      )}
-    </HeaderContainer>
+            </Column>
+
+            <Column size={6}>
+              <small style={{ float: "right" }}>+ add new categories</small>
+            </Column>
+        </Row>
+        <hr/>
+      
+      
+    </Div>
+    </>
   );
 }

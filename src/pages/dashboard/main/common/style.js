@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 
 export const DashboardContainer = styled.div`
   background-color: #ebebeb;
+  padding: 30px;
   height: 100%;
   // display: flex;
   // // flex-wrap: wrap;
@@ -26,13 +27,13 @@ export const DashboardContainer = styled.div`
 `;
 
 export const DashboardBody = styled.div`
-  margin-left: 18%;
-  width: 82%;
+  margin-left: 10%;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  background: transparent;
+  background: #fafcfe;
   border-radius: 8px;
-  padding: 10px;
+  padding: 30px;
   overflow: auto;
   height: 100vh;
 

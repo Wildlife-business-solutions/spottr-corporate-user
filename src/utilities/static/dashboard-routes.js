@@ -12,6 +12,8 @@ import {
   WALLET,
   REQUESTS,
   PROFILE,
+  PROFILE2,
+  PROFILE3,
   TRANSACTIONS,
   TASKS,
   ANALYSIS,
@@ -20,6 +22,7 @@ import {
   PRODUCTPAGE,
   MYTASKS,
   TASKDETAILS,
+  MEMBERS,
 } from "./route-const";
 import SavedPage from "../../pages/dashboard/main/saved";
 import OpportunitiesPage from "../../pages/dashboard/main/opportunities";
@@ -34,6 +37,8 @@ import RequestsPage from "../../pages/dashboard/main/requests";
 import TasksPage from "../../pages/dashboard/main/tasks";
 import LogoutPage from "../../pages/dashboard/main/logout";
 import ProfilePage from "../../pages/dashboard/main/profile";
+import Profile2 from "pages/dashboard/main/profile/profile2";
+import Profile3 from "pages/dashboard/main/profile/profile3";
 import AnalyticsPage from "../../pages/dashboard/main/settings/dashboardanalysis";
 import SearchRequestPage from "../../pages/dashboard/main/searchrequests";
 import MessagePage from "../../pages/dashboard/main/messages";
@@ -41,6 +46,7 @@ import ProductPage from "../../pages/dashboard/main/productpage";
 import WalletPage from "../../pages/dashboard/main/transactions/wallet";
 import MyTasks from "pages/dashboard/main/myTasks";
 import TaskDetails from "pages/dashboard/main/tasks/taskDetails";
+import Members from "pages/dashboard/main/members";
 // import WalletPage from "pages/dashboard/main/wallet";
 
 export const dashboardRoutes = [
@@ -52,8 +58,29 @@ export const dashboardRoutes = [
     type: "navbar",
   },
   {
+    path: MEMBERS,
+    component: Members,
+    exact: true,
+    protected: true,
+    type: "navbar",
+  },
+  {
     path: PROFILE,
     component: ProfilePage,
+    exact: true,
+    protected: true,
+    type: "profile",
+  },
+  {
+    path: PROFILE2,
+    component: Profile2,
+    exact: true,
+    protected: true,
+    type: "profile",
+  },
+  {
+    path: PROFILE3,
+    component: Profile3,
     exact: true,
     protected: true,
     type: "profile",

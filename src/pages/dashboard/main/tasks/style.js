@@ -6,7 +6,7 @@ export const TaskBoxDiv = styled.div`
 
 export const TaskMenu = styled.div`
   display: flex;
-  width: 400px;
+  // width: 400px;
   border-bottom: 1px solid #c2e0ff;
   margin-top: ${({ mt }) => mt || null};
 

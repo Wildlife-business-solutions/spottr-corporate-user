@@ -17,7 +17,7 @@ import {
   MenuToggleContainer,
   UserInfoMenuContainer,
 } from "./style";
-import HomeIcon from "assets/svg/logo.svg";
+import HomeIcon from "assets/svg/shortlogo.svg";
 import menuToggle from "assets/svg/navbarOpenBtn.svg";
 import menuCloseBtn from "assets/svg/closeBtn.svg";
 import defaultAvatar from "assets/svg/default-avatar.svg";
@@ -96,7 +96,7 @@ export default function Menu() {
           justify="space-between"
           alignI="center"
           padding="0 0 0 8px">
-          <Img src={HomeIcon} alt="Spottr" h="90px" w="90px" />
+          <Img src={HomeIcon} alt="Spottr" h="60px" w="60px" />
           <Div onClick={handleCloseBigSideNav} cursor="pointer">
             <Img
               src={menuCloseBtn}
@@ -124,9 +124,9 @@ export default function Menu() {
             display="flex"
             justify="space-between"
             padding="15px 20px 55px 20px">
-            <SpottrP fw="600" fs="14px" mt="1px" color={Colors.ligterGrey}>
+            {/* <SpottrP fw="600" fs="14px" mt="1px" color={Colors.ligterGrey}>
               Terms of service
-            </SpottrP>
+            </SpottrP> */}
             <Button bc="rgba(0, 0, 0, 0)" onClick={logout}>
               <SpottrP fw="600" fs="14px" mt="1px" color={Colors.primary}>
                 Logout

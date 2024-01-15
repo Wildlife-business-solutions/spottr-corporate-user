@@ -27,7 +27,11 @@ export default function TasksHead({ input, setInput }) {
         <Spacer />
         <TSearch
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Search Tasks"
+          placeholder="Search Members"
+        />
+        <Filters
+          title="Select"
+          options={["None", "Name", "Location", "Rating", "List"]}
         />
         <Filters
           title="Filter"
