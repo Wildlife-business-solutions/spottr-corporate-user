@@ -30,6 +30,7 @@ import { LoginText } from "pages/signin/Login/style";
 import { LabelText } from "components/onboading/inputField/style";
 import { Column } from "../common/style";
 import { Row } from "react-bootstrap";
+import MessagingModal from "../discover/modal/NotificationModal/messagingModal";
 
 export default function DashboardHeader() {
   const [subHeaderMenu, setSubHeaderMenu] = useState(0);
@@ -38,10 +39,14 @@ export default function DashboardHeader() {
     useRecentSearchContext();
   const [searchFocus, setSearchFocus] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showMessagingModal, setShowMessagingModal] = useState(false);
   const history = useHistory();
 
   function handleNotification() {
     setShowModal(true);
+  }
+  function handleMessaging() {
+    setShowMessagingModal(true);
   }
 
   function productModal() {
@@ -86,14 +91,19 @@ export default function DashboardHeader() {
         <Div cursor="pointer" onClick={handleNotification} mr="10px">
           <Img src={Bell} height="20px" width="20px" alt="Notification Bell" />
         </Div>
-        <SpottrLink to={MESSAGES} display="flex">
+        {/* <SpottrLink to={MESSAGES} display="flex"> */}
+        <Div cursor="pointer" onClick={handleMessaging} mr="10px">
           <Img src={Message} height="20px" width="20px" alt="Message" />
-        </SpottrLink>
+          </Div>
+        {/* </SpottrLink> */}
       <SpottrLink to={PROFILE} display="flex">
         <Img src={Avatar} height="50px" width="50px" alt="Message" />
       </SpottrLink>
       {showModal && (
         <NotificationModal show={showModal} close={() => setShowModal(false)} />
+      )}
+      {showMessagingModal && (
+        <MessagingModal show={showMessagingModal} close={() => setShowMessagingModal(false)} />
       )}
       </NotificationDiv>
 

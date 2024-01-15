@@ -3,7 +3,7 @@ import AdminBackdrop from "components/UI/AdminModal";
 import ModalContent from "components/UI/ModalContent";
 import { Input, Div, SpottrP, Img } from "GlobalStyles/spotrrStyles/style";
 
-const DynamicModal = ({ height, width, show, close, header, children }) => {
+const DynamicModal2 = ({ height, width, show, close, header, children }) => {
   return (
     <AdminBackdrop
       bg="rgb(31 31 31 / 70%)"
@@ -15,9 +15,9 @@ const DynamicModal = ({ height, width, show, close, header, children }) => {
         wd={width ? width : ""}
         hg={height ? height : "auto"}
         mwd={width ? width : "400px"}
-        br="15px"
+        br="5px"
         modalHeader="">
-        <Div padding="35px">
+        <Div padding="8px 25px">
           <SpottrP color="#274B89" fs="20px" tAlign="left">
             {header}
           </SpottrP>
@@ -30,4 +30,4 @@ const DynamicModal = ({ height, width, show, close, header, children }) => {
   );
 };
 
-export default DynamicModal;
+export default DynamicModal2;

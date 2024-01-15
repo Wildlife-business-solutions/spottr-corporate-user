@@ -23,6 +23,8 @@ import {
   MYTASKS,
   TASKDETAILS,
   MEMBERS,
+  MEMBERS2,
+  REQUESTS2 ,
 } from "./route-const";
 import SavedPage from "../../pages/dashboard/main/saved";
 import OpportunitiesPage from "../../pages/dashboard/main/opportunities";
@@ -47,6 +49,8 @@ import WalletPage from "../../pages/dashboard/main/transactions/wallet";
 import MyTasks from "pages/dashboard/main/myTasks";
 import TaskDetails from "pages/dashboard/main/tasks/taskDetails";
 import Members from "pages/dashboard/main/members";
+import Members2 from "pages/dashboard/main/members/members2";
+import Requests2 from "pages/dashboard/main/members/requests2";
 // import WalletPage from "pages/dashboard/main/wallet";
 
 export const dashboardRoutes = [
@@ -60,6 +64,20 @@ export const dashboardRoutes = [
   {
     path: MEMBERS,
     component: Members,
+    exact: true,
+    protected: true,
+    type: "navbar",
+  },
+  {
+    path: MEMBERS2,
+    component: Members2,
+    exact: true,
+    protected: true,
+    type: "navbar",
+  },
+  {
+    path: REQUESTS2,
+    component: Requests2,
     exact: true,
     protected: true,
     type: "navbar",

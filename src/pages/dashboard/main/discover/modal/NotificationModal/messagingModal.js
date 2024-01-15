@@ -9,7 +9,7 @@ import { Tab } from "react-bootstrap";
 import Hug from "assets/svg/hug.svg";
 import Divider from "GlobalStyles/dividerLine";
 
-const NotificationModal = ({ show, close, header }) => {
+const MessagingModal = ({ show, close, header }) => {
 
     let content = [];
 
@@ -42,8 +42,8 @@ const NotificationModal = ({ show, close, header }) => {
         modalHeader="">
         <Div padding="25px" >
           <Div display="flex" justify="space-between">
-            <Div fs="20px" color="#274B89" fw="bold" alignI="left">Notifications</Div>
-            <Div fs="13px" color="#274B89" fw="bold" alignI="left">Clear all</Div>
+            <Div fs="20px" color="#274B89" fw="bold" alignI="left">Messaging</Div>
+            <Div fs="13px" color="#274B89" fw="bold" alignI="left">Mark all as read</Div>
 
           </Div>
 
@@ -55,4 +55,4 @@ const NotificationModal = ({ show, close, header }) => {
   );
 };
 
-export default NotificationModal;
+export default MessagingModal;

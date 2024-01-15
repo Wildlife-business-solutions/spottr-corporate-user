@@ -16,6 +16,8 @@ export const PROFILE3 = `/dashboard/profile3`;
 export const ANALYSIS = `/dashboard/analysis`;
 export const MESSAGES = `/dashboard/messages`;
 export const MEMBERS = `/dashboard/members`;
+export const MEMBERS2 = `/dashboard/members2`;
+export const REQUESTS2 = `/dashboard/requests2`;
 export const PRODUCTPAGE = `/dashboard/productpage/:id`;
 export const TASKDETAILS = `/dashboard/taskDetail/:id`;
 
