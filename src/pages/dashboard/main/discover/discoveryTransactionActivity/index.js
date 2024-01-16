@@ -8,7 +8,7 @@ const DiscoveryTransactionActivity = () => {
   return (
     <div>
       <SpottrP color={"#274B89"} fw="bold" p="0 0 15px">
-        Transaction Activity
+      Best performance
       </SpottrP>
       <Div display="flex" width="100%" margin="10px 0px">
         <Button

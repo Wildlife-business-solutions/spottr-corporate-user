@@ -15,6 +15,8 @@ import CreateAd from "./modal/createAd";
 import { useSelector } from "react-redux";
 import dropdown from "assets/mem/membertype.svg";
 import userIcon from "assets/svg/userIcon1.svg";
+import Icon87 from "assets/svg/87.svg";
+import ActivityChart from "assets/svg/activityChart.svg";
 import { Img } from "../../../../GlobalStyles/spotrrStyles/style";
 import upgreen from "assets/svg/upgreen.svg";
 import DiscoverCategoryModal from "./modal/discoverCategoryModal";
@@ -110,133 +112,127 @@ function DiscoverPage() {
       
       <Div width="100%" padding="0px 0px 50px 0px">
         <>
-          <Row>
-            <Column size={2}>
+        <Div display="flex" margin="0 0 20px 0" justify="space-evenly">
 
-          <Div
-            display="flex"
-            justify="space-between"
-            alignI="center"
-            width="300px"
-            height="120px"
-            padding="20px"
-            backgroundColor={Colors.white}
-            br="10px"
-            style={{ border: "0.9px solid #E1EFFB" }}
-            >
-            <Div > 
-              <Div display="flex" width="100%" justify="space-between">
-                <SpottrP color={Colors.primary} fs="20px" fw="bold " p="0 0 6px 0">
-                  45
-                </SpottrP>
-                <Img src={userIcon} height="23px" width="23px" alt="User" />
+          <Div width="60%" margin="0 10px 0 0 ">
+            <Div display="flex" justify="space-between">
 
+              <Div width="100%" margin="0 10px 0 0" height="120px"  padding="20px" backgroundColor={Colors.white} br="10px" style={{ border: "0.9px solid #E1EFFB" }}>
+                <Div display="flex" justify="space-between">
+                  <Div fs="25px" color="#274B89" fw="bold" alignI="left">45</Div>
+                  <Img src={userIcon} height="25px" width="25px" alt="User" />
+
+                </Div>
+                <br/>
+                <Div display="flex" justify="space-between">
+                  <small>Total members</small>
+                  <small style={{ color:'#39B54A', fontSize: '14px', fontWeight: '400'  }}>+ 34.98%</small>
+                </Div>
+              </Div>
+
+              <Div width="100%" margin="0 10px 0 0" height="120px" padding="20px" backgroundColor={Colors.white} br="10px" style={{ border: "0.9px solid #E1EFFB" }}>
+                <Div display="flex" justify="space-between">
+                  <Div fs="20px" color="#274B89" fw="bold" alignI="left">N22,030,789</Div>
+                  <Img src={userIcon} height="25px" width="25px" alt="User" />
+
+                </Div>
+                <br/>
+                <Div display="flex" justify="space-between">
+                  <small>Total sales</small>
+                  <small style={{ color:'#39B54A', fontSize: '14px', fontWeight: '400'  }}>+12.09%</small>
+                </Div>
+              </Div>
+
+              <Div width="100%" margin="0 10px 0 0" height="120px" padding="20px" backgroundColor={Colors.white} br="10px" style={{ border: "0.9px solid #E1EFFB" }}>
+                <Div display="flex" justify="space-between">
+                  <Div fs="25px" color="#274B89" fw="bold" alignI="left">5,678</Div>
+                  <Img src={userIcon} height="25px" width="25px" alt="User" />
+
+                </Div>
+                <br/>
+                <Div display="flex" justify="space-between">
+                  <small>Total customers</small>
+                  <small style={{ color:'#FF4B3E', fontSize: '14px', fontWeight: '400'  }}> -2.98%</small>
+                </Div>
+              </Div>
+
+            </Div>
+            <br/>
+            <Div display="flex" justify="space-between">
+
+              <Div width="100%" margin="0 10px 0 0" height="180px"  padding="20px" backgroundColor={Colors.white} br="10px" style={{ border: "0.9px solid #E1EFFB" }}>
+                <Div display="contents" >
+                  <Div fs="15px" color="#274B89" fw="bold" alignI="left">Performances</Div>
+
+                  <Div  display="flex" justify="flex-end" ><Img src={Icon87} /></Div>
+
+                  <small style={{  fontSize: '12px', fontWeight: '400'  }}>45 new ads running </small>
+                </Div>
               </Div>
               
-              <Div display="flex" width="100%" justify="space-between">
-                <small>Total members</small>
-                <small style={{  }}>+ 34.98%</small>
+              
+              <Div width="100%" margin="0 10px 0 0" height="180px"  padding="20px" backgroundColor={Colors.white} br="10px" style={{ border: "0.9px solid #E1EFFB" }}>
+                <Div display="contents" >
+                  <Div fs="15px" color="#274B89" fw="bold" alignI="left">Search response</Div>
 
+                  <Div  display="flex" justify="flex-end" ><Img src={Icon87} /></Div>
+
+                  <small style={{  fontSize: '12px', fontWeight: '400'  }}>View brands </small>
+                </Div>
               </Div>
+
+              
+
+
             </Div>
-            
+
           </Div>
 
-            </Column>
-            </Row>
+          <Div display="flex" justify="" width="40%">
+            <GoogleMaps />
+            </Div>
+        </Div>
+
+
+
           <Row>
             <Column size={2}>
               <MapAreaDiscover
               // onClick={handleMapAd}
               >
                 <Div width="100%" height="350px" mb="15px">
-                  {/* <iframe
-                    title="map"
-                    width="100%"
-                    height="350px"
-                    id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=spottr&t=k&z=13&ie=UTF8&iwloc=&output=embed"
-                    // src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=400x400&key=AIzaSyC7L4FduzOjHfe8v81bjj6FPHPs8e_yVoc&signature=uTiPm4Yr3GJpM-ZBjMRbZUGLnVU="
-                    frameBorder="0"
-                    scrolling="no"
-                    marginHeight="0"
-                    marginWidth="0"
-                  /> */}
-                  <GoogleMaps />
+                <Div display="flex" justify="space-between">
+                  <Div fs="15px" color="#274B89" fw="bold" alignI="left">Transaction activity</Div>
+
+
+                  <small style={{  fontSize: '12px', fontWeight: 'bold', color: '#274B89'  }}>Total in </small>
+                  <small style={{  fontSize: '12px', fontWeight: 'bold', color: '#274B89'  }}>Total Out </small>
                 </Div>
-                <ItemCategoryContainer style={{ marginTop: "20px" }}>
-                  {categories.slice(0, 6)?.map((category, i) => (
-                    <Div
-                      cursor="pointer"
-                      key={category.id}
-                      onClick={() => handleCategory(category)}>
-                      <CategoryContent
-                        key={i}
-                        image={category.displayImage}
-                        text={category.name}
-                      />
-                    </Div>
-                  ))}
-                </ItemCategoryContainer>
-                <Div backgorund="none" ta="center" margin="15px 0px 0px 0px ">
-                  <Button
-                    onClick={() => setShowAllCategory(!showAllCategory)}
-                    m="10px"
-                    bc="none">
-                    View All
-                    <span style={{ marginLeft: "10px" }}>
-                      {!showAllCategory ? (
-                        <img
-                          src={dropdown}
-                          className="dropdown_style"
-                          alt="filter dropdown"
-                        />
-                      ) : (
-                        <Img
-                          src={upgreen}
-                          alt="down"
-                          width="15px"
-                          height="15px"
-                        />
-                      )}
-                    </span>
-                  </Button>
+
+                <Img src={ActivityChart} width={"100%"} height={"100%"}/>
+                  
                 </Div>
-                {showAllCategory && (
-                  <ItemCategoryContainer
-                    style={{ height: "24vh", overflow: "auto" }}>
-                    {categories?.map((category, i) => (
-                      <Div
-                        margin="20px 0px 0px 0px"
-                        flex="0 0 20%"
-                        key={category.id}>
-                        <CategoryContent
-                          index={i}
-                          image={category.displayImage}
-                          text={category.name}
-                        />
-                      </Div>
-                    ))}
-                  </ItemCategoryContainer>
-                )}
+                
+                
+                
               </MapAreaDiscover>
               <>
-                <DiscoverWallarea action={handleAdCreation} />
               </>
             </Column>
-            <Column size={2}>
-              <ContainerTrendingDiscover>
-                <TrendingSearch />
-              </ContainerTrendingDiscover>
-            </Column>
-            <Column width="23rem" size={2}>
+            {/* <Column size={2}>
               <ContainerTrendingDiscover>
                 <DiscoveryTransactionActivity />
               </ContainerTrendingDiscover>
               <ContainerTrendingDiscover mt="15px">
                 <DiscoverRefer />
               </ContainerTrendingDiscover>
+            </Column> */}
+            <Column size={2}>
+              <ContainerTrendingDiscover>
+                <TrendingSearch />
+              </ContainerTrendingDiscover>
             </Column>
+            
           </Row>
           {/* <Row>
             <Column size={1}>
